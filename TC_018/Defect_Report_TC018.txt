@@ -1,0 +1,33 @@
+DEFECT REPORT
+
+Defect ID: BUG_003
+Related Test Case: TC_018
+Project: Swag Labs E-Commerce
+Reporter: Hansel Roche
+Date: January 03, 2026
+
+Summary: 'Reset App State' clears cart data but fails to reset UI button states.
+
+Severity: Medium
+Priority: Medium (User Confusion)
+
+Description:
+The 'Reset App State' function successfully clears the number of items in the cart (backend), but the Inventory UI does not refresh to reflect this. Items previously added still show a "Remove" button instead of reverting to "Add to cart".
+
+Steps to Reproduce:
+1. Log in as 'standard_user'.
+2. Click 'Add to cart' on any item (e.g., Backpack).
+3. Open the Burger Menu (top left).
+4. Click 'Reset App State'.
+5. Close the menu and observe the Backpack item.
+
+Expected Result:
+The cart badge should disappear, AND the button on the Backpack should revert to "Add to cart".
+
+Actual Result:
+The cart badge disappears (Correct), but the button still says "Remove" (Incorrect UI State).
+
+Environment:
+* URL: saucedemo.com
+* Browser: Brave Browser
+* OS: Windows 11

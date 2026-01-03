@@ -1,0 +1,36 @@
+DEFECT REPORT
+
+Defect ID: BUG_001
+Related Test Case: TC_002
+Project: Swag Labs E-Commerce
+Reporter: Hansel Roche
+Date: January 03, 2026
+
+Summary: Checkout module accepts invalid Special Characters in 'Zip Code' field.
+
+Severity: Medium
+Priority: Low (Does not crash the system, but allows bad data)
+
+Description:
+The application allows users to enter special characters (e.g., "!!!!") into the Zip/Postal Code field during checkout. The system should validate this input and reject it, but instead, it accepts the data and proceeds to the Payment Overview page.
+
+Pre-Conditions:
+1. User is logged in as 'standard_user'.
+2. User has at least one item in the cart.
+
+Steps to Reproduce:
+1. Navigate to the Cart and click 'Checkout'.
+2. Enter valid data in 'First Name' and 'Last Name'.
+3. In the 'Zip/Postal Code' field, enter: !!!!
+4. Click the 'Continue' button.
+
+Expected Result:
+The system should display an error message: "Error: Invalid Zip Code format" and prevent the user from proceeding.
+
+Actual Result:
+The system accepts the special characters and redirects the user to the "Checkout: Overview" page.
+
+Environment:
+* URL: saucedemo.com
+* Browser: Brave Browser
+* OS: Windows 11

@@ -1,0 +1,32 @@
+DEFECT REPORT
+
+Defect ID: BUG_004
+Related Test Case: TC_020
+Project: Swag Labs E-Commerce
+Reporter: Hansel Roche
+Date: January 03, 2026
+
+Summary: System allows checkout process to initiate with an Empty Cart.
+
+Severity: Medium
+Priority: Medium
+
+Description:
+The application allows a user to proceed through the entire checkout flow even if there are 0 items in the cart. Most e-commerce platforms disable the checkout button when the cart is empty to prevent empty orders.
+
+Steps to Reproduce:
+1. Log in as 'standard_user'.
+2. Ensure the cart is empty (Badge is not visible).
+3. Click the Cart icon.
+4. Click the 'Checkout' button.
+
+Expected Result:
+The 'Checkout' button should be disabled (grayed out) OR clicking it should display an error: "Your cart is empty."
+
+Actual Result:
+System redirects user to the 'Checkout: Your Information' page, allowing the process to continue.
+
+Environment:
+* URL: saucedemo.com
+* Browser: Brave Browser
+* OS: Windows 11

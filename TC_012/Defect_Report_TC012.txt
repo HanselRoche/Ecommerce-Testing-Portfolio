@@ -1,0 +1,31 @@
+DEFECT REPORT
+
+Defect ID: BUG_002
+Related Test Case: TC_012
+Project: Swag Labs E-Commerce
+Reporter: Hansel Roche
+Date: January 03, 2026
+
+Summary: Product images map to incorrect 'Dog' placeholder for 'problem_user' account.
+
+Severity: Low (Cosmetic/UI)
+Priority: Low
+
+Description:
+When logged in as the 'problem_user', all product inventory images fail to load the correct product photography. Instead, every item displays the same placeholder image of a dog, regardless of the product description.
+
+Steps to Reproduce:
+1. Navigate to www.saucedemo.com.
+2. Log in with Username: 'problem_user' and Password: 'secret_sauce'.
+3. View the Inventory page.
+
+Expected Result:
+Each product should display its specific image (e.g., Backpack should show a backpack).
+
+Actual Result:
+All products display identical 'Dog' images.
+
+Environment:
+* URL: saucedemo.com
+* Browser: Brave Browser
+* OS: Windows 11
